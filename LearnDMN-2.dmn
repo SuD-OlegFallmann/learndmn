@@ -63,38 +63,10 @@
     <dmn:extensionElements/>
     <dmn:variable id="_0FDED811-3BC5-43B9-A664-73688D40D69D" name="group" typeRef="string"/>
     <dmn:encapsulatedLogic id="_C37F6FE5-DB27-4C91-A48B-F0573AD0A0C2" kind="FEEL">
-      <dmn:formalParameter id="_2D321A4E-CDC0-440B-9337-84D2795F9666" name="iValue" typeRef="number"/>
-      <dmn:decisionTable id="_E6736377-A699-4691-96F5-1F24CC436693" typeRef="string" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
-        <dmn:input id="_C48DB08A-3673-4BA2-A1E7-07F89A0F719F">
-          <dmn:inputExpression id="_354FBAEB-47BC-4774-B8C4-9369075F5D59" typeRef="number">
-            <dmn:text>iValue</dmn:text>
-          </dmn:inputExpression>
-        </dmn:input>
-        <dmn:output id="_8BE568E4-6E2D-413C-8B7F-38C4356FF84F"/>
-        <dmn:annotation name="annotation-1"/>
-        <dmn:rule id="_1B7F6B3A-AF59-495C-9409-A038C3E918F8">
-          <dmn:inputEntry id="_2BA6CF64-E5D1-4BCC-BE93-83D539DCDD64">
-            <dmn:text>odd(iValue)</dmn:text>
-          </dmn:inputEntry>
-          <dmn:outputEntry id="_736CE83E-9BD2-42FF-8395-AE2ADA6495DF">
-            <dmn:text>"odd"</dmn:text>
-          </dmn:outputEntry>
-          <dmn:annotationEntry>
-            <dmn:text/>
-          </dmn:annotationEntry>
-        </dmn:rule>
-        <dmn:rule id="_EB14EAB3-3034-4722-B929-6A1CBA71E741">
-          <dmn:inputEntry id="_F23A8D82-3C8D-495B-BF0A-FE892EB58168">
-            <dmn:text>even(iValue)</dmn:text>
-          </dmn:inputEntry>
-          <dmn:outputEntry id="_D1861DB0-D6F2-4E6D-BB48-4EEC5CDF7D26">
-            <dmn:text>"even"</dmn:text>
-          </dmn:outputEntry>
-          <dmn:annotationEntry>
-            <dmn:text/>
-          </dmn:annotationEntry>
-        </dmn:rule>
-      </dmn:decisionTable>
+      <dmn:formalParameter id="_2D321A4E-CDC0-440B-9337-84D2795F9666" name="i" typeRef="number"/>
+      <dmn:literalExpression id="_DD472CDE-2629-4981-B364-D3FED9A6092F">
+        <dmn:text>if odd(i) then "odd" else "even"</dmn:text>
+      </dmn:literalExpression>
     </dmn:encapsulatedLogic>
   </dmn:businessKnowledgeModel>
   <dmndi:DMNDI>
@@ -115,11 +87,8 @@
           <kie:ComponentWidths dmnElementRef="_E77C9E4C-D8F1-4113-B4DA-DC3CF1AF83D6">
             <kie:width>300</kie:width>
           </kie:ComponentWidths>
-          <kie:ComponentWidths dmnElementRef="_E6736377-A699-4691-96F5-1F24CC436693">
-            <kie:width>50</kie:width>
-            <kie:width>100</kie:width>
-            <kie:width>100</kie:width>
-            <kie:width>100</kie:width>
+          <kie:ComponentWidths dmnElementRef="_DD472CDE-2629-4981-B364-D3FED9A6092F">
+            <kie:width>370</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_C37F6FE5-DB27-4C91-A48B-F0573AD0A0C2">
             <kie:width>50</kie:width>
