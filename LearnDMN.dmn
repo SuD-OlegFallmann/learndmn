@@ -32,12 +32,13 @@
           <dmn:contextEntry>
             <dmn:variable id="_6F6E18C4-59C7-40D0-9AE9-4116FBAEFBE0" name="LoopResult"/>
             <dmn:literalExpression id="_73168281-71D3-466B-A73F-464B13500D3F">
-              <dmn:text>for i in InputList return (if odd(i) then  append(NewDoubleList.List1, i) else   append(NewDoubleList.List2, i))</dmn:text>
+              <dmn:text>for i in InputList return (if odd(i) then context put(NewDoubleList, List1, i) else context put(NewDoubleList, List1, i))</dmn:text>
             </dmn:literalExpression>
           </dmn:contextEntry>
           <dmn:contextEntry>
             <dmn:literalExpression id="_BA2826E8-AC7E-4604-8F47-5BEDC310BB28">
-              <dmn:text>{ List1: NewDoubleList.List1, List2: NewDoubleList.List2 }</dmn:text>
+              <dmn:text>{ List1: NewDoubleList.List1, List2: NewDoubleList.List2 }
+</dmn:text>
             </dmn:literalExpression>
           </dmn:contextEntry>
         </dmn:context>
